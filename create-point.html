@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/create-point.css" />
+
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <div class="page-createPoint">
+      <header>
+        <img src="/assets/logo.svg" alt="Logo Ecoleta" />
+        <a href="index.html">
+          <span></span>
+          Voltar para home</a
+        >
+      </header>
+
+      <form class="form" action="">
+        <h1>Cadastro do ponto de coleta</h1>
+
+        <!--Fieldset será a coleção de campos do formulario-->
+        <fieldset>
+          <legend><h2>Dados da entidade</h2></legend>
+
+          <div class="field">
+            <label for="name">Nome da entidade</label>
+            <input type="text" name="name" />
+          </div>
+
+          <div class="field-group">
+            <div class="field">
+              <label for="address">Endereço</label
+              ><input type="text" name="address" required />
+            </div>
+            <div class="field">
+              <label for="address">Numero/Complemento</label
+              ><input type="text" name="address" required />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <div class="field">
+              <label for="state">Estado</label>
+              <select class="uf" name="uf" required></select>
+              <input class="inputSate" type="hidden" name="state" required />
+            </div>
+
+            <div class="field">
+              <label for="city">Cidade</label>
+              <select class="city" name="city" disabled>
+                <option value="">Selecione a cidade</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <h2>Itens de coleta</h2>
+          </legend>
+
+          <div class="items-grid">
+            <li data-id="1">
+              <img src="/assets/lampadas.svg" alt="lampadas" /><span
+                >Lâmpadas</span
+              >
+            </li>
+            <li data-id="2">
+              <img src="/assets/baterias.svg" alt="pilhas e baterias" /><span
+                >Pilhas e Baterias</span
+              >
+            </li>
+            <li data-id="3">
+              <img
+                src="/assets/papeis-papelao.svg"
+                alt="papéis e papelao"
+              /><span>Papéis e Papelão</span>
+            </li>
+            <li data-id="4">
+              <img
+                src="/assets/eletronicos.svg"
+                alt="Resíduos Eletrônicos"
+              /><span>Resíduos Eletrônicos</span>
+            </li>
+            <li data-id="5">
+              <img src="/assets/organicos.svg" alt="Resíduos Orgânicos" /><span
+                >Resíduos Orgânicos</span
+              >
+            </li>
+            <li data-id="6">
+              <img src="/assets/oleo.svg" alt="Óleo de Cozinha" /><span
+                >Óleo de Cozinha</span
+              >
+            </li>
+          </div>
+
+          <input type="hidden" name="items" />
+        </fieldset>
+
+        <button type="submit">Cadastrar ponto de coleta</button>
+      </form>
+    </div>
+
+    <script src="scripts/create-point.js"></script>
+  </body>
+</html>
